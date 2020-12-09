@@ -3,9 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import DogsForm from './components/DogsForm'
-import router from './router'
+import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false
+Vue.use(VueRouter)
+
+var router = new VueRouter({
+  routes: [
+    { path: '', component: App } 
+  ]
+});
 
 /* eslint-disable no-new */
 new Vue({
