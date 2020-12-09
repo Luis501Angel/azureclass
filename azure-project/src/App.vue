@@ -48,10 +48,7 @@ export default {
   methods: {
     getTodos(){
       console.log('Codigo de get todos')
-      axios.get('https://apirest-dogs.azurewebsites.net/api/dogs', {
-             headers: {
-               "Access-Control-Allow-Origin " : "*"
-             }}).then(response => {
+      axios.get('https://apirest-dogs.azurewebsites.net/api/dogs').then(response => {
         console.log(response)
         this.getTodos = response.data
       })
