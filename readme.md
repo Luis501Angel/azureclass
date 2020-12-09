@@ -32,7 +32,10 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+El proposito de este proyecto es agregar perros a una base de datos en MongoDB usando como Frontend Vue.JS, haciendo uso de Azure Functions
+y desplegando la aplicación en el nuevo Azure Static WebApp
+
+Enlace de aplicación desplegada -> https://happy-sky-00ec05010.azurestaticapps.net/#/
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -42,9 +45,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them.
 
-```
-Give examples
-```
+* NodeJS
+* Vue CLI
 
 ### Installing
 
