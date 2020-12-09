@@ -11,16 +11,6 @@
         </div>
         </div>
        <div>
-        <div v-bind:key="type" class="columns medium-3" v-for="result in todos">
-  <div class="card">
-    <div class="card-divider">
-      {{ result.name }}
-    </div>
-    <div class="card-section">
-      <p>{{ result.race }}.</p>
-    </div>
-  </div>
-</div>
        </div>
       </div>
     </div>
