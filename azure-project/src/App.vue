@@ -10,7 +10,18 @@
           </div>
         </div>
         </div>
-       
+       <div>
+         <table>
+           <tbody>
+             <tr>
+               <td>celda</td>
+               <td>celda</td>
+               <td>celda</td>
+               <td>celda</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
       </div>
     </div>
   </div>
@@ -18,11 +29,31 @@
 
 <script>
 import DogsForm from './components/DogsForm'
+import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     DogsForm
+  },
+  data(){
+    return {
+      todos: null
+    }
+  },
+  mounted(){
+    console.log('Hola mundo desde mounted')
+    this.getTodos();
+  },
+  methods: {
+    getTodos(){
+      console.log('Codigo de get todos')
+      axios.get('http://localhost:7071/api/dogs').then(response => {
+        console.log(response)
+        this.getTodos = response.data
+      })
+      .catch(e => console.log(e))
+    }
   }
 }
 </script>
