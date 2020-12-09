@@ -14,7 +14,8 @@ mongoose.connect(uri, options).then(
 );
 
 module.exports = async function (context, req) {
-    const body = req.body;
+    
+    const body = req.body
     try {
         const notaDB = await Dog.create(body);
         context.res.status(200).json(notaDB);

@@ -11,16 +11,16 @@
         </div>
         </div>
        <div>
-         <table>
-           <tbody>
-             <tr>
-               <td>celda</td>
-               <td>celda</td>
-               <td>celda</td>
-               <td>celda</td>
-             </tr>
-           </tbody>
-         </table>
+        <div class="columns medium-3" v-for="todo in todos">
+  <div class="card">
+    <div class="card-divider">
+      {{ result.title }}
+    </div>
+    <div class="card-section">
+      <p>{{ result.abstract }}.</p>
+    </div>
+  </div>
+</div>
        </div>
       </div>
     </div>
@@ -48,7 +48,10 @@ export default {
   methods: {
     getTodos(){
       console.log('Codigo de get todos')
-      axios.get('http://localhost:7071/api/dogs').then(response => {
+      axios.get('https://apirest-dogs.azurewebsites.net/api/dogs', {
+             headers: {
+               "Access-Control-Allow-Origin " : "*"
+             }}).then(response => {
         console.log(response)
         this.getTodos = response.data
       })
