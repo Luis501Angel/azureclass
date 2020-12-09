@@ -11,13 +11,13 @@
         </div>
         </div>
        <div>
-        <div class="columns medium-3" v-for="todo in todos">
+        <div v-bind:key="type" class="columns medium-3" v-for="result in todos">
   <div class="card">
     <div class="card-divider">
-      {{ result.title }}
+      {{ result.name }}
     </div>
     <div class="card-section">
-      <p>{{ result.abstract }}.</p>
+      <p>{{ result.race }}.</p>
     </div>
   </div>
 </div>
@@ -49,8 +49,8 @@ export default {
     getTodos(){
       console.log('Codigo de get todos')
       axios.get('https://apirest-dogs.azurewebsites.net/api/dogs').then(response => {
-        console.log(response)
         this.getTodos = response.data
+        console.log(this.getTodos)
       })
       .catch(e => console.log(e))
     }
